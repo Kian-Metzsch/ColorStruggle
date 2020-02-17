@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nordicnerds.colorstruggle">
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:isGame="true"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/FullscreenStyle"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="lollipop">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9467553631695603~3905444125" />
+
+        <activity
+            android:name="com.nordicnerds.colorstruggle.LoadingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nordicnerds.colorstruggle.RetryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenStyle" />
+        <activity
+            android:launchMode="singleInstance"
+            android:name="com.nordicnerds.colorstruggle.LeaderboardsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenStyle" />
+        <activity
+            android:name="com.nordicnerds.colorstruggle.GameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenStyle" />
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

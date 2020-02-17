@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.nordicnerds.colorstruggle.RetryActivity">
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <View
+            android:layout_width="wrap_content"
+            android:animateLayoutChanges="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_Restartscreen"
+            android:background="#2f2e2e"
+            tools:ignore="MissingConstraints"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/imageButton_retry"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/start_image"
+        android:contentDescription="@string/todo"
+        android:onClick="retry_click"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_UserId"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_border_lastscore"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:textColor="@color/light_font"
+        android:textSize="21sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView_highscore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView_highscore"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="112dp"
+        android:background="@android:color/holo_blue_dark"
+        android:contentDescription="@string/todo"
+        android:gravity="center"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="@string/highscore_0"
+        android:textColor="@color/light_font"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_lastscore"
+        android:layout_width="258dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_border_lastscore"
+        android:contentDescription="@string/todo"
+        android:gravity="center"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="@string/last_score_0"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_retry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_highscore"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView_settings"
+        android:layout_width="65dp"
+        android:layout_height="273dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/rounded_border_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_retry"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageButton_logout_login"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/fb_icon"
+        android:onClick="click_logout_login"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton_settings"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton_settings"
+        app:layout_constraintStart_toStartOf="@+id/imageButton_settings"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_retry"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageButton_sound_onOff"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/sound_on_icon"
+        android:onClick="menu_sound"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton_music_onOff"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_settings"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/imageView_settings"
+        app:layout_constraintTop_toTopOf="@+id/imageView_settings"
+        app:layout_constraintVertical_bias="0.61"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageButton_music_onOff"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/music_on_icon"
+        android:onClick="menu_music"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_settings"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_settings"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/imageView_settings"
+        app:layout_constraintTop_toTopOf="@+id/imageView_settings"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageButton_achivement"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/leaderboards_icon"
+        android:contentDescription="@string/todo"
+        android:onClick="menu_leaderboards"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_settings"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_settings"
+        app:layout_constraintStart_toStartOf="@+id/imageView_settings"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_music_onOff"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <ImageButton
+        android:id="@+id/imageButton_settings"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/settings_icon"
+        android:contentDescription="@string/todo"
+        android:onClick="menu_click"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!--ads:adUnitId="ca-app-pub-9467553631695603/2111772884"-->
+
+
+    <Button
+        android:id="@+id/button_shield"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/extra_shield"
+        android:onClick="ad_shield"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_retry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_retry"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_retry" />
+
+
+</android.support.constraint.ConstraintLayout>
+<!--ads:adUnitId="ca-app-pub-9467553631695603/2111772884"-->

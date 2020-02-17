@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "63011987046",
+    "firebase_url": "https://colorstruggle.firebaseio.com",
+    "project_id": "colorstruggle",
+    "storage_bucket": "colorstruggle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63011987046:android:89898c4540aa716d",
+        "android_client_info": {
+          "package_name": "com.nordicnerds.colorstruggle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63011987046-bshb1d8e0cb1op8e863lueb0ci08dtth.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nordicnerds.colorstruggle",
+            "certificate_hash": "156b340f42c622f8ff70b6fb287f0ed984598208"
+          }
+        },
+        {
+          "client_id": "63011987046-tp5eg07jlh5nm2co1gh4susrjc4vnngo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArOuvSwGv_34ZI8jDOwbkBQz25k6mvd1c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63011987046-tp5eg07jlh5nm2co1gh4susrjc4vnngo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
